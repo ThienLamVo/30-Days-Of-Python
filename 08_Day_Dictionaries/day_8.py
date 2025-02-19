@@ -16,6 +16,7 @@ student['city'] = 'c'
 student['address'] = {'street': 'a', 'zipcode': '24060'}
 print(student)
 print(len(student))
+print(student.get('skills'))
 student.get('skills').append('c')
 print(student.keys())
 print(student.values())
