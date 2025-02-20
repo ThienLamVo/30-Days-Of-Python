@@ -1,3 +1,8 @@
+def add_two_numbers(a, b):
+    return a + b
+print(f'{add_two_numbers(1, 2)}')
+
+
 def add_all_nums(*nums):
   sum = 0
   for num in nums: 
