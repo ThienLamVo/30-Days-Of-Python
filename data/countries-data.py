@@ -2649,3 +2649,39 @@ for i in range(1, 11):
     for country in countries:
         if country['population'] == populations[-i]:
             print(f'{country["name"]} has population of {populations[-i]}')
+
+def most_spoken_languages():
+    languages = {}
+    for country in countries:
+        for language in country['languages']:
+            if not language in languages:
+                languages[language] = 1
+            else:
+                languages[language] += 1
+    for i in range(20):
+        current_most_spoken = ''
+        current_most_spoken_num = 0
+        for language in languages:
+            if languages[language] >= current_most_spoken_num:
+                current_most_spoken = language
+                current_most_spoken_num = languages[language]
+        print(f'{current_most_spoken}: {current_most_spoken_num}')
+        languages.pop(current_most_spoken)
+print()
+
+def most_populated_countries():
+    populations = {}
+    for country in countries:
+        populations[country['name']] = country['population']
+    for i in range(20):
+        current_largest_country = ''
+        current_largest_population = 0
+        for population in populations:
+            if populations[population] > current_largest_population:
+                current_largest_country = population
+                current_largest_population = populations[population]
+        print(f'{current_largest_country}: {current_largest_population}')
+        populations.pop(current_largest_country)
+
+most_spoken_languages()
+most_populated_countries()
