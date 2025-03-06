@@ -2658,7 +2658,7 @@ def most_spoken_languages():
                 languages[language] = 1
             else:
                 languages[language] += 1
-    for i in range(20):
+    for i in range(10):
         current_most_spoken = ''
         current_most_spoken_num = 0
         for language in languages:
@@ -2666,7 +2666,12 @@ def most_spoken_languages():
                 current_most_spoken = language
                 current_most_spoken_num = languages[language]
         print(f'{current_most_spoken}: {current_most_spoken_num}')
+        for country in countries:
+            for language in country['languages']:
+                if current_most_spoken == language:
+                    print(country['name'])
         languages.pop(current_most_spoken)
+        print()
 print()
 
 def most_populated_countries():
@@ -2684,4 +2689,17 @@ def most_populated_countries():
         populations.pop(current_largest_country)
 
 most_spoken_languages()
+most_populated_countries()
+
+countries_sorted = sorted([x['name'] for x in countries])
+print(countries_sorted)
+
+countries_capital_sorted = sorted([[x['capital'], x['name']] for x in countries])
+print(countries_capital_sorted)
+
+countries_population_sorted = sorted([[x['population'], x['name']] for x in countries])
+print(countries_population_sorted)
+
+most_spoken_languages()
+
 most_populated_countries()

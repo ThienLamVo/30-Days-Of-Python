@@ -211,3 +211,11 @@ print(country_one)
 print(country_two)
 print(country_three)
 print(rest_countries)
+
+def get_first_ten_countries(lst):
+  return filter(lambda x: lst.index(x) < 10, lst)
+print(list(get_first_ten_countries(countries)))
+
+def get_last_ten_countries(lst):
+  return filter(lambda x: lst.index(x) > len(lst) - 11, lst)
+print(list(get_last_ten_countries(countries)))
