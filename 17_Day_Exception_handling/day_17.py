@@ -98,6 +98,8 @@ for f, v in zip(fruits, vegetables):
 
 print(fruits_and_veges)
 
+# Exercises
+
 names = ['Finland', 'Sweden', 'Norway','Denmark','Iceland', 'Estonia','Russia']
 *nordic_countries, es, ru = names
 print(nordic_countries)
