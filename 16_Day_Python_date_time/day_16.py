@@ -113,7 +113,7 @@ today_date = "5 December, 2019"
 print(datetime.strptime(today_date, "%d %B, %Y"))
 print()
 
-new_year_2024 = datetime(year = 2024, month = 1, day = 1, hour = 0, minute = 0, second = 0)
+new_year_2024 = datetime(year = 2026, month = 1, day = 1, hour = 0, minute = 0, second = 0)
 diff = new_year_2024 - current_now
 print('Difference is: ', diff)
 
